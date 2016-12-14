@@ -3,22 +3,17 @@
 ![](https://dl.dropboxusercontent.com/s/8frf8rblw6pnpds/hipsterlogogenerator_1438007087793.png?dl=0)
 
 is a Ruby on Rails application where users can read, write, and interact
-with the best content all around the world. It is designed to be built, refined, and deployed over the course of four nights.
+with the best content all around the world. It is designed to be built, refined, and deployed over the course of two nights.
 
 We will start off with two models: `Post` and `Comment`.
 
 ## Submitting
 
-#### Please do one of the two following:
+#### Please do the following:
 
-Create a new repo, and submit homework as an **ISSUE** on this repo.
+Fork this repo, and submit homework as a **PULL REQUEST** on this repo.
 ```
-$ rails new scribble -d postgresql
-```
-
-**OR...** Fork this repo, and submit homework as a **PULL REQUEST** on this repo.
-```
-$ git clone git@github.com:ga-wdi-exercises/scribble.git
+$ git clone git@github.com:ga-wdi-pvd/scribble.git
 $ cd scribble
 # ***VERY IMPORTANT***
 $ rails new . -d postgresql
@@ -27,27 +22,29 @@ The `.` creates a new Rails app inside the *CURRENT* folder. Otherwise, it creat
 
 *This is how a lot of people end up with a `scribble` folder inside another `scribble` folder.*
 
-## Models + Migrations
+## Night One
+### Models + Migrations
 
 - Create ERD for Post and Comment
 - Create models for Post and Comment
 - Create migrations for Post and Comment
 
-## Index Feature
+### Index Feature
 - Create an index where a user can see all posts
 - Each post should link to its respective show page
 
-## Show Feature
+### Show Feature
 - Create a show where a user can see each individual post.
 - The show page should also show all of the post's comments.
 
-## Creating
+## Night Two
+### Creating
 - Allow the user to create new posts and comments
 
-## Editing
+### Editing
 - Allow the user to edit existing posts and comments
 
-## Deleting
+### Deleting
 - Allow the user to delete existing posts and comments.
 
 ## Bonus
