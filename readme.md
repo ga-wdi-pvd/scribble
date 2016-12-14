@@ -11,9 +11,9 @@ We will start off with two models: `Post` and `Comment`.
 
 #### Please do the following:
 
-Fork this repo, and submit homework as a **PULL REQUEST** on this repo.
+Fork this repo, and submit homework as a pull request on this repo.
 ```
-$ git clone git@github.com:ga-wdi-pvd/scribble.git
+$ git clone [link to YOUR Scribble repo]
 $ cd scribble
 # ***VERY IMPORTANT***
 $ rails new . -d postgresql
