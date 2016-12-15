@@ -96,3 +96,92 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+Started GET "/" for ::1 at 2016-12-15 18:32:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `post' for #<PostsController:0x007fc42e2c90a8>):
+  
+app/controllers/posts_controller.rb:3:in `index'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (163.5ms)
+Started GET "/" for ::1 at 2016-12-15 18:33:31 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (26.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (293.9ms)
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 76.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fc42d32c398>:0x007fc42d33f0b0>
+Did you mean?  @post):
+    2: <p>Find me in app/views/posts/index.html.erb</p>
+    3: 
+    4: 
+    5: <% post.each do  |x| %>
+    6:   <h1><%=x[:text] %>
+    7:     <%end%>
+  
+app/views/posts/index.html.erb:5:in `_app_views_posts_index_html_erb__2262080043302769729_70240274313160'
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (106.2ms)
+Started GET "/" for ::1 at 2016-12-15 18:33:49 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1096ms (Views: 1092.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (31.1ms)[0m  [1m[32mINSERT INTO "posts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "hello hello"], ["created_at", 2016-12-15 23:34:36 UTC], ["updated_at", 2016-12-15 23:34:36 UTC]]
+  [1m[35m (14.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2016-12-15 18:34:49 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 144ms (Views: 126.0ms | ActiveRecord: 7.8ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "posts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "Putting up a Christmas tree is hard work. But it's UP!"], ["created_at", 2016-12-15 23:35:52 UTC], ["updated_at", 2016-12-15 23:35:52 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "Finally on Vacation from work."], ["created_at", 2016-12-15 23:38:09 UTC], ["updated_at", 2016-12-15 23:38:09 UTC]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[32mINSERT INTO "posts" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "Was gonna smoke but.... Lol hope my car starts tomorrow"], ["created_at", 2016-12-15 23:38:49 UTC], ["updated_at", 2016-12-15 23:38:49 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2016-12-15 18:39:03 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 140ms (Views: 125.7ms | ActiveRecord: 0.8ms)
+
+
