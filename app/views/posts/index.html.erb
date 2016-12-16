@@ -1,0 +1,9 @@
+
+
+<ul>
+  <% @posts.each do |p| %>
+    <li>
+      <p><%= link_to p.author, post_path(p) %></p>
+    </li>
+  <% end %>
+</ul>

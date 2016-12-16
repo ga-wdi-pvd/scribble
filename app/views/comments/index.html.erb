@@ -1,0 +1,9 @@
+
+
+<ul>
+  <% @comments.each do |c| %>
+    <li>
+      <p><%= link_to c.author, comment_path(c) %></p>
+    </li>
+  <% end %>
+</ul>

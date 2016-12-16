@@ -1,0 +1,13 @@
+<h2><%= link_to "Posts", posts_path %></h2>
+<p><%= @posts.author %></p>
+<p><%= @posts.title %></p>
+<p><%= @posts.body %></p>
+<br>
+<p></p>
+<ul>
+  <% @comments.each do |c| %>
+    <li>
+      <p><%= link_to c.author, comment_path(c) %></p>
+    </li>
+  <% end %>
+</ul>
