@@ -1,0 +1,8 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+<p><%= comment.body %></p>
+<p>Posted: <%= comment.created_at %></p>
+<% end %>
+<%= link_to 'All Posts', posts_path %>
