@@ -1,0 +1,16 @@
+<h1>this is h1 app/views/posts/show.html.erb</h1>
+<h3>this page should show all of a posts comments</h3>
+<br>
+<p>the post u clicked on</p>
+<br>
+
+
+  <% @comments.each do |comm| %>
+
+
+
+          <%= comm.body %>
+
+
+
+  <% end %>

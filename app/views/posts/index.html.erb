@@ -1,0 +1,15 @@
+<h1>This is an h1 in app/views/posts/index.html.erb</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+<br>
+<h2>Please click on any of the interesting posts below.</h2>
+
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <a href="/posts/<%= post.id %>">
+        <%= post.body %>
+      </a>
+    </li>
+  <% end %>
+</ul>
