@@ -1,0 +1,8 @@
+<h2>Hello Post</h2>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <p><%= link_to post.body, post %></p>
+    </li>
+  <% end %>
+</ul>
