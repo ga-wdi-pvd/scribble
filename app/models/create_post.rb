@@ -3,7 +3,8 @@ class CreatePosts < ActiveRecord::Migration[5.0]
     create_table :posts do |t|
       t.string :body
       t.string :author
-      t.timestamps null: false
+
+      t.timestamps
     end
   end
 end
