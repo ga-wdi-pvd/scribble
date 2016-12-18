@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Scribble</title>
-    <%= csrf_meta_tags %>
+<title>Scribble</title>
+<meta charset="UTF-8">
+<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <body>
-    <%= yield %>
-  </body>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32">
+  <h1><b>Scribble</b></h1>
+  <p>Welcome to the content of <span class="w3-tag">THE WORLD!</span></p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+  <!-- Ruby on Rails -->
+  <%= yield %>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-btn w3-padding-large w3-margin-bottom">Next »</button>
+  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
 </html>

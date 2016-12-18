@@ -1,6 +1,31 @@
-<h1>Editing Post</h1>
+<p id="notice"><%= notice %></p>
 
-<%= render 'form', post: @post %>
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container w3-padding-8">
+      <h3><b>Editing Post</b></h3>
+      <h5>Created: <span class="w3-opacity"><%= @post.created_at.strftime("%d %b. %Y") %></span></h5>
+    </div>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+    <div class="w3-container">
+      <p><%= render 'form', post: @post %></p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p>
+            <button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black">
+              <b><%= link_to '« Back', posts_path %></b>
+            </button>
+            <button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black">
+              <b><%= link_to 'Show »', @post %></b>
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+<!-- END BLOG ENTRIES -->
+</div>
