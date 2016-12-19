@@ -1,10 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Post', new_post_path %>
-<!-- Blog entries -->
+<!-- Post entries -->
 <div class="w3-col l8 s12">
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container w3-padding-8">
+      <h2><b>POSTS</b></h2>
+      <%= link_to 'New Post', new_post_path %>
+    </div>
+  </div>
   <% @posts.each do |post| %>
-    <!-- Blog entry -->
+    <!-- Post entry -->
     <div class="w3-card-4 w3-margin w3-white">
       <div class="w3-container w3-padding-8">
         <h3><b><%= post.title %></b></h3>
@@ -35,7 +40,6 @@
         </div>
       </div>
     </div>
-    <hr>
   <% end %>
-<!-- END BLOG ENTRIES -->
+<!-- END POST ENTRIES -->
 </div>

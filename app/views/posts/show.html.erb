@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<!-- Blog entries -->
+<!-- Post entry -->
 <div class="w3-col l8 s12">
-  <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
     <div class="w3-container w3-padding-8">
       <h3><b><%= @post.title %></b></h3>
@@ -29,7 +28,22 @@
       </div>
     </div>
   </div>
-  <hr>
+<!-- END POST ENTRY-->
+</div>
 
-<!-- END BLOG ENTRIES -->
+<!-- Comment entries -->
+<div class="w3-col l8 s12">
+
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container w3-padding-8">
+      <h3><b>COMMENTS</b></h3>
+    </div>
+    <%= render 'comments/form' %>
+    <!-- Comment entry, Solution from David Bock on stackoverflow -->
+    <%= render(@post.comments) || content_tag("p") do %>
+      This POST has no comments yet!
+    <% end %>
+    </div>
+  </div>
+<!-- END Comment ENTRIES -->
 </div>

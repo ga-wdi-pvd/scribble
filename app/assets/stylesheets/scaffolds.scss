@@ -20,29 +20,6 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
-th {
-  padding-bottom: 5px;
-}
-
-td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
 div {
   &.field, &.actions {
     margin-bottom: 10px;
@@ -67,16 +44,6 @@ div {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0;
-    background-color: #c00;
-    color: #fff;
-  }
 
   ul li {
     font-size: 12px;
