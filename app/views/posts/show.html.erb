@@ -1,13 +1,12 @@
-<h2><%= link_to "Posts", posts_path %></h2>
-<p><%= @posts.author %></p>
-<p><%= @posts.title %></p>
+<h2><%= link_to "Return to Post Index", posts_path %></h2>
+<p> <h3><%= @posts.title %> [<%= link_to 'Edit', edit_post_path(@posts) %>] </h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by: <%= @posts.author %></p>
 <p><%= @posts.body %></p>
 <br>
-<p></p>
-<ul>
-  <% @comments.each do |c| %>
-    <li>
-      <p><%= link_to c.author, comment_path(c) %></p>
-    </li>
-  <% end %>
-</ul>
+<br>
+
+<h2>Comments</h2>
+<%= render @posts.comments %>
+
+<h2>Add a comment:</h2>
+
+<%= render 'comments/form' %>
