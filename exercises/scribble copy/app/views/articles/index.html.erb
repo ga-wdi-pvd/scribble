@@ -1,0 +1,26 @@
+<center><h1>** articles **</h1>
+<h4><%= link_to ' ++  ADD ARTICLE  ++ ', new_article_path %></h4>
+<br>
+
+<table>
+  <tr>
+    <br>
+    <th>Title</th>
+    <th><</th>
+      <th>ACTIONS</th>
+    <th>></th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+    <td><button><%= link_to 'READ', article_path(article) %></button></td>
+      <td><button><%= link_to 'EDIT', edit_article_path(article) %></button></td>
+     <td><button><%= link_to 'KILL', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></button></td>
+    </tr>
+  <% end %>
+
+</table>
+</center>

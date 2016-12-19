@@ -1,0 +1,26 @@
+<center>
+<h1><strong>BLOG</strong></h1>
+
+
+
+
+<h2>** <%= @article.title %> **</h2>
+<div><%= @article.text %></div>
+
+<h2>Comments</h2>
+  <% @article.comments.each do |comment| %>
+
+<p>  <%= comment.commenter %>: <%= comment.body %></p>
+
+<button><%= link_to 'Delete Comment', [comment.article, comment],
+             method: :delete,
+             data: { confirm: 'You really gonna do it?' } %></button>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+<h2>
+<button>  <%= link_to 'Back back back it up', articles_path %></button><br>
+<button><%= link_to 'Edit', edit_article_path(@article) %></button>
+</h2>
+</center>

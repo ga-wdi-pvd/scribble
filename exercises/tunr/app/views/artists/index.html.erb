@@ -1,0 +1,17 @@
+
+
+<center>
+  <!-- <% @artists.each do |artist| %>
+      <h3>ARTIST:<p><%= artist.name %></p></h3>
+      <p>NATIONALITY:<%= artist.nationality %></p>
+      <p><%= artist.photo_url %></p>
+  <% end %> -->
+
+
+  <% @artists.each do |artist| %>
+
+      <p><%= link_to artist.name, artist %></p>
+
+  <% end %>
+
+</center>

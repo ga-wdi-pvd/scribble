@@ -1,0 +1,14 @@
+
+
+<center>
+  <!-- <% @songs.each do |song| %>
+    <h3>Album:<p><%= song.album %></p></h3>
+      <p>Song:<%= song.title %></p>
+  <% end %> -->
+
+  <% @songs.each do |song| %>
+
+      <p><%= link_to song.title, song %></p>
+
+  <% end %>
+</center>
