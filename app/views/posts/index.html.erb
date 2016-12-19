@@ -1,0 +1,46 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<form action="posts/index" method="post">
+  <textarea cols="50" rows="4" name="comment" name="text"></textarea>
+  <input type="submit"></input>
+</form>
+
+<%= form_for @post do |f| %>
+
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@article.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+
+
+
+<% @post.each do |post| %>
+  <a href="/post/<%=post.id%>"><h1><%=post[:text] %></h1></a>
+    <%end %>
