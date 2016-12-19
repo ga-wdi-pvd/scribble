@@ -10,7 +10,6 @@ We will start off with two models: `Post` and `Comment`.
 ## Submitting
 
 #### Please do the following:
-
 Fork this repo, and submit homework as a pull request on this repo.
 ```
 $ git clone [link to YOUR Scribble repo]
