@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
 
+  concern :tagable do
+    resources :tags
+  end
+
   resources :posts do
     resources :comments
+    resources :tags
+  end
+
+  resources :categories do
+    resources :tags
   end
 
   root 'posts#index'

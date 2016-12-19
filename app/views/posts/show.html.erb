@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<!-- Post entry -->
+
 <div class="w3-col l8 s12">
+  <!-- Post entry -->
   <div class="w3-card-4 w3-margin w3-white">
     <div class="w3-container w3-padding-8">
       <h3><b><%= @post.title %></b></h3>
@@ -27,25 +28,20 @@
         </div>
       </div>
     </div>
+    <!-- END POST ENTRY-->
   </div>
-<!-- END POST ENTRY-->
-</div>
 
 <!-- Comment entries -->
-<div class="w3-col l8 s12">
   <div class="w3-card-4 w3-margin w3-white">
     <div class="w3-container w3-padding-8">
       <h3><b>COMMENTS</b></h3>
     </div>
     <!-- Comment entry, Solution from David Bock on stackoverflow -->
     <%= render @post.comments %>
+  <!-- END Comment ENTRIES -->
   </div>
-<!-- END Comment ENTRIES -->
-</div>
 
-<!-- Add comment entry -->
-<div class="w3-col l8 s12">
-
+  <!-- Add comment entry -->
   <div class="w3-card-4 w3-margin w3-white">
     <div class="w3-container w3-padding-8">
       <h3><b>ADD COMMENT</b></h3>
@@ -55,4 +51,25 @@
     </div>
   </div>
 <!-- END Comment ENTRY -->
+</div>
+
+<!-- Tag menu -->
+<div class="w3-col l4">
+
+  <!-- Labels / tags -->
+  <div class="w3-card-2 w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+    </p>
+    </div>
+  </div>
+
+<!-- END Tag Menu -->
 </div>

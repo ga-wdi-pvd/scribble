@@ -6,6 +6,7 @@
     <div class="w3-container w3-padding-8">
       <h2><b>POSTS</b></h2>
       <%= link_to 'New Post', new_post_path %>
+      <%= link_to 'Categories', categories_path %>
     </div>
   </div>
   <% @posts.each do |post| %>
@@ -35,7 +36,7 @@
             </p>
           </div>
           <div class="w3-col m4 w3-hide-small">
-            <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+            <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag"><%= post.comments.length %></span></span></p>
           </div>
         </div>
       </div>
