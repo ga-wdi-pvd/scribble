@@ -1,0 +1,5 @@
+<h1><%= @post.text %><h1>
+
+<% @comment.each do |com| %>
+<h2><%=com[:text]%></h2>
+<%end%>
