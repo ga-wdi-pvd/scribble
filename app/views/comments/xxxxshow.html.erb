@@ -1,0 +1,5 @@
+<h1>comments.show.html.erb</h1>
+<h2><%= link_to "Comments", comments_path %></h2>
+<p><%= @comments.author %></p>
+<p><%= @comments.body %></p>
+<p><%= link_to Post.find(@comments.post_id).author, post_path(@comments.post_id) %></p>
