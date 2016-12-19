@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+input,
+textarea{
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  border-bottom:1px solid #808080;
+  outline: none;
+  width: 100%;
+}
