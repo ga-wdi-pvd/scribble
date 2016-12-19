@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ h1 {
+   border-style: solid;
+   border-width: thick;
+   border-color: white;
+   border-radius: 10px;
+   color: black;
+   font-family: blacksword;
+ }
+body {
+  text-align: center;
+  background-color: black;
+  background-image: url("https://lh3.googleusercontent.com/-qLzR1umpw88/TVYMxsNCgMI/AAAAAAAACt8/qs4eH33WYvI/s800/Bella%252520Blue%252520Blog%252520Background%2525203.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  font-family: "comic sans";
+  text-shadow: 2px 2px white;
+}
+th {
+  font-family: impact;
+  border-style:  ridge;
+
+}
+table {
+  border-style: solid;
+  text-align: center;
+}
+td:hover { background-color: lightblue; }
+
+h4 {
+  font-family: raidercrusader;
+  border-style: dashed;
+  display: inline;
+  margin-bottom: 10px;
+}
+a:visited {
+  color: black;
+}
+strong {
+  font-family: sister spray;
+  display: inline;
+  border-style: double;
+}
+
+div {
+  border-bottom: dashed;
+  border-style: dashed;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 614px;
+  text-align: center;
+}
+h7 {
+  border-style: none;
+}
+
+span {
+  font-family: raider crusader;
+  text-shadow: 4px 4px lightblue;
+}
+button {
+  background-color: lightblue;
+  width: auto;
+  height: auto;
+}
