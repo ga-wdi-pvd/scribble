@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="hangman.css">
+    <title>Anusone's Hangman Game</title>
+</head>
+
+<body>
+
+    <div class='title'>Hangman Game</div>
+
+
+    <form action="hangman.html">
+        <input autofocus='autofocus' id='wordInput' type="text" placeholder="Player 1's word" name="wordInput"><br><br>
+        <button id='buttonOne' type="button" name="button">Start Game</button>
+    </form>
+
+    <div id='test'>
+        <p id='wordInputArr' class='wordInputArr'>
+          INSTRUCTIONS<br>
+          Player 1 please input word above and click Start Game.<br> Player 2 will guess one letter at a time in player 1's word in the field below.<br> Player 2 will be allowed 5 wrong guesses before they lose.
+        </p>
+    </div>
+    <progress id="health" value="5" max="5"></progress>
+
+
+
+
+        <form id='form2'>
+            <input id='wordInputTwo' type="text" maxlength='1' name="wordInputTwo" height="10px" width='100' placeholder="Letter Guesses">
+            <br><br><button id='buttonTwo' type="button" name="button">Player 2 Guesses</button>
+        </form>
+        <div id='livesCounterTitle'>GUESSES LEFT</div>
+        <div id='livesCounter' value=5></div>
+
+
+    <audio id="ffmusic" src='ffmusic.mp3'></audio>
+    <audio id="good-sound" src='ooweee.mp3'></audio>
+    <audio id='horn' src="horn.mp3"></audio>
+    <audio id='victory' src="victory.mp3"></audio>
+    <audio id='boo' src="boo.mp3"></audio>
+
+
+
+
+
+
+
+
+
+    <script src="hangman.js"></script>
+</body>
+
+</html>

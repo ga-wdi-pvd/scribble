@@ -1,0 +1,122 @@
+body {
+  text-align: center;
+  justify-content: center;
+  color: black;
+  font-family: "marker felt", serif;
+  font-size: 30px;
+  text-shadow: 1px 1px yellow;
+  background-image: url('hangman.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1000px 700px;
+  background-color: black;
+
+
+}
+
+
+.letterHolder {
+
+  justify-content: center;
+  margin: 0 10px;
+  display: inline-flex;
+  flex-direction: row;
+  border-bottom: 5px solid white;
+  width: 40px;
+  height: 50px;
+
+}
+
+#wordInputArr {
+  word-wrap: break-word;
+  width: 350px;
+  justify-content: center;
+  display: inline-flex;
+}
+
+#wordInputTwo {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
+
+.title  {
+  font-family: "raider crusader", "blacksword";
+  color: darkblue;
+  text-shadow: yellow;
+  font-size: 65px;
+  text-decoration: underline;
+}
+
+
+progress {
+   height: 100px;
+   width: 500px;
+}
+
+button {
+  height: 30px;
+  background-color: darkblue;
+  color: white;
+}
+
+
+#test p {
+  border-style: groove;
+  border-color: black;
+    justify-content: center;
+    width: 650px;
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 3s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+    background-color: white;
+    text-align: center;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+progress[value] {
+-webkit-appearance: none;
+width: 500px;
+height: 20px;
+border-color: black;
+border-style: solid;
+border-width: medium;
+
+}
