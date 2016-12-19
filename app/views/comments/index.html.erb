@@ -13,7 +13,7 @@
       <td><%= comment.text %></td>
       <td><%= link_to 'Show', comment_path(comment) %></td>
       <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
+      <td><%= link_to 'Destroy', comment_path(comment),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
 
