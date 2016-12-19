@@ -1,5 +1,6 @@
 <h2><%= link_to "Return to Post Index", posts_path %></h2>
-<p> <h3><%= @posts.title %> [<%= link_to 'Edit', edit_post_path(@posts) %>] </h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by: <%= @posts.author %></p>
+<p> <h3><%= @posts.title %> [<%= link_to 'Edit', edit_post_path(@posts) %>] </h3>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by: <%= @posts.author %></p>
 <p><%= @posts.body %></p>
 <br>
 <br>
@@ -8,5 +9,4 @@
 <%= render @posts.comments %>
 
 <h2>Add a comment:</h2>
-
 <%= render 'comments/form' %>

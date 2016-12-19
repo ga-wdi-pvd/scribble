@@ -12,7 +12,7 @@ def get_comment_data
           {
             author: 'Matrim Cauthon',
             body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.'
-            }
+          }
           ],
         'post2' => [
           {
@@ -26,7 +26,7 @@ def get_comment_data
           {
             author: 'Matrim Cauthon',
             body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.'
-            }
+          }
       ],
         'post3' => [{
             author: 'Matrim Cauthon',
