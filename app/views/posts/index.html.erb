@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<!-- Post entries -->
+<div class="w3-col l8 s12">
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container w3-padding-8">
+      <h2><b>POSTS</b></h2>
+      <%= link_to 'New Post', new_post_path %>
+      <%= link_to 'Categories', categories_path %>
+    </div>
+  </div>
+  <% @posts.each do |post| %>
+    <!-- Post entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <div class="w3-container w3-padding-8">
+        <h3><b><%= post.title %></b></h3>
+        <h5>Created: <span class="w3-opacity"><%= post.created_at.strftime("%d %b. %Y") %></span></h5>
+      </div>
+
+      <div class="w3-container">
+        <p><%= post.body %></p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p>
+              <button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black">
+                <b><%= link_to 'Show »', post %></b>
+              </button>
+
+              <button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black">
+                <b><%= link_to 'Edit »', edit_post_path(post) %></b>
+              </button>
+
+              <button class="w3-btn w3-padding-large w3-white w3-border w3-hover-border-black">
+                <b><%= link_to 'Destroy »', post, method: :delete, data: { confirm: 'Are you sure?' } %></b>
+              </button>
+            </p>
+          </div>
+          <div class="w3-col m4 w3-hide-small">
+            <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag"><%= post.comments.length %></span></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<!-- END POST ENTRIES -->
+</div>
