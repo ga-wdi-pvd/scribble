@@ -5,8 +5,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id].to_i)
-    @comments = Comment.where(post_id: @post)
+    @post = Post.find(params[:id])
+    # @comments = Comment.where(post_id: @post)
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+  
 end
